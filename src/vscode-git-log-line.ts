@@ -4,6 +4,7 @@
 import * as vscode from "vscode";
 
 import { grabGitLineDiff } from "./grab-git-line-diff";
+import { showGitDiffContent } from "./show-git-diff-content";
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -37,8 +38,8 @@ async function showLineGitHistory() {
             `getting git history for file ${filename} at line ${lineNo}`
         );
         try {
-            const content = await grabGitLineDiff(filename, lineNo);
-            console.log(content);
+            const content: string = await grabGitLineDiff(filename, lineNo);
+            await showGitDiffContent(content);
         } catch (e) {
             console.error(e);
             throw e;
