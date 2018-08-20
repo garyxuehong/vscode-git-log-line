@@ -8,7 +8,7 @@ const fswrite = promisify(writeFile);
 export async function showGitDiffContent(content: string) {
     const tempFile = await getTmpFile();
     await fswrite(tempFile.path, content, "utf-8");
-    const text = await vscode.commands.executeCommand(
+    await vscode.commands.executeCommand(
         "vscode.open",
         vscode.Uri.file(tempFile.path)
     );
