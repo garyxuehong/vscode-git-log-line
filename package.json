@@ -11,14 +11,14 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onCommand:vscode-git-log-line.showLineLog"
     ],
-    "main": "./out/extension",
+    "main": "./out/vscode-git-log-line",
     "contributes": {
         "commands": [
             {
-                "command": "extension.sayHello",
-                "title": "Hello World"
+                "command": "vscode-git-log-line.showLineLog",
+                "title": "Git: Show Line Log History"
             }
         ]
     },
