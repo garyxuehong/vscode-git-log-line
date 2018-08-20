@@ -4,6 +4,10 @@
     "description": "Show log line of vscode",
     "version": "0.0.1",
     "publisher": "garyxuehong",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/garyxuehong/vscode-git-log-line"
+    },
     "engines": {
         "vscode": "^1.26.0"
     },
